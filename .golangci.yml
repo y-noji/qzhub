@@ -1,0 +1,32 @@
+run:
+  go: "1.20"
+  skip-dirs:
+    - "tools"
+
+linters:
+  enable-all: true
+  disable:
+    - depguard
+    - wrapcheck
+
+    # Deprecated
+    - deadcode
+    - exhaustivestruct
+    - golint
+    - ifshort
+    - interfacer
+    - maligned
+    - nosnakecase
+    - scopelint
+    - structcheck
+    - varcheck
+
+linters-settings:
+  gci:
+    custom-order: true
+    sections:
+      - standard
+      - default
+      - prefix(github.com/yumemi/kadokawa-cw-idp)
+      - blank
+      - dot
